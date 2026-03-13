@@ -125,3 +125,38 @@ body{
 
     z-index:4;
 }
+.search-bar{
+    position:absolute;
+
+    /* ⭐ logo reference alignment */
+    top:18px;          /* logo ke visual mid level */
+    left:460px;        /* ⭐ approx logo width + 40px gap */
+
+    z-index:5;
+}
+.search-box{
+    display:flex;
+    align-items:center;
+
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(8px);
+
+    border-radius:30px;
+    padding:6px 10px;
+}
+
+.search-box input{
+    border:none;
+    outline:none;
+    background:transparent;
+
+    width:180px;
+    font-size:14px;
+}
+
+.search-box button{
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    font-size:16px;
+}
