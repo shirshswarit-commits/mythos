@@ -23,7 +23,7 @@ body{
     width: 65%;
     height: 100%;
     float:right;
-    background-image:url("garud.png");
+    background-image:url("vishnu.png");
     background-size:cover;
     background-repeat:no-repeat;
 
@@ -107,7 +107,7 @@ body{
     width:clamp(90px, 10vw, 160px);
     height:clamp(90px, 10vw, 160px);
 
-    background:url("200w\ \(2\).webp") no-repeat center;
+    background:url("200w.webp") no-repeat center;
     background-size:contain;
     
     mix-blend-mode: difference;
@@ -159,4 +159,61 @@ body{
     background:transparent;
     cursor:pointer;
     font-size:16px;
+}
+desc{
+    max-width:800px;
+    margin:auto;
+    line-height:1.6;
+    font-size:18px;
+}
+
+/* TREE LAYOUT */
+.tree{
+    margin-top:40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:40px;
+}
+
+/* LEVEL ROW */
+.level{
+    display:flex;
+    gap:60px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* CONNECTOR LINE */
+.connector{
+    width:4px;
+    height:40px;
+    background:black;
+}
+
+/* NODE STYLE */
+.node{
+    background:white;
+    padding:14px 22px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.node:hover{
+    transform:translateY(-6px);
+    background:#ffe0b3;
+}
+
+/* MAIN GODS */
+.main{
+    font-size:20px;
+    font-weight:bold;
+    background:#fff4d6;
+}
+
+/* SMALL NODES */
+.small{
+    font-size:14px;
 }
