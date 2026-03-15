@@ -86,7 +86,7 @@ body{
     backdrop-filter:blur(6px);
 }
 .overlay p{
-    color: red;
+    color:black;
     overflow:scroll;
     overflow: inherit;
 }
