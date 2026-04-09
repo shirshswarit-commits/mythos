@@ -1,11 +1,37 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 
+  background-color: #f95f07;
 
-body{
-    margin:0;
-    background:#fd6202;
-    font-family:Arial, Helvetica, sans-serif;
+  position: relative;
+  min-height: 100vh;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("shankh.png");
+  background-size: 80px;
+  background-repeat: repeat;
+
+  animation: fadeBg 3s infinite ease-in-out;
+
+  z-index: 0.7;
+}
+@keyframes fadeBg {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
 .main-container{
     margin:0px;
     width:100%;
@@ -13,24 +39,21 @@ body{
     border-radius:8px;
     overflow:hidden;
     position:relative;
-   
 }
 
-/* FULL COVER IMAGE */
 .img-container{
    
     inset:0;
     width: 65%;
     height: 100%;
     float:right;
-    background-image:url("bramha.png");
+    background-image:url("bhrama.png");
     background-size:cover;
     background-repeat:no-repeat;
 
-    /* cinematic framing */
     background-position: right center;
 }
-/* THIN BAR */
+
 .nav-bar{
     position:absolute;
     top:20px;
@@ -46,7 +69,6 @@ body{
     backdrop-filter:blur(10px);
 }
 
-/* ITEMS */
 .nav-item{
     color:black;
     font-size:18px;
@@ -69,7 +91,7 @@ body{
 
     z-index:2;
 
-    padding:80px 60px;   /* inner spacing only */
+    padding:80px 60px;
     box-sizing:border-box;
 
     display:flex;
@@ -95,13 +117,13 @@ body{
 }
 .card-container{
     width:100%;
-    padding:40px 60px;     /* outer spacing */
+    padding:40px 60px;
     box-sizing:border-box;
 
     display:flex;
     flex-wrap:wrap;
 
-    gap:30px;              /* ⭐ cards ke beech space */
+    gap:30px;
 
     background:#fd6202;
 }
@@ -138,7 +160,7 @@ body{
 }
 .img-container-2{
      position:absolute;
-    top:-120px;      /* ⭐ pull upward */
+    top:-120px;
     left:-30px;
 
     width:500px;
@@ -152,10 +174,8 @@ body{
 .gifs{
     position:absolute;
 
-    /* ⭐ vertical ko fixed optical anchor do */
     top:85px;
 
-    /* ⭐ horizontal responsive rakho */
     left:clamp(640px, 32%, 720px);
 
     width:clamp(90px, 10vw, 160px);
@@ -172,9 +192,8 @@ body{
 .search-bar{
     position:absolute;
 
-    /* ⭐ logo reference alignment */
-    top:18px;          /* logo ke visual mid level */
-    left:460px;        /* ⭐ approx logo width + 40px gap */
+    top:18px;
+    left:460px;
 
     z-index:5;
 }
@@ -204,4 +223,3 @@ body{
     cursor:pointer;
     font-size:16px;
 }
-    

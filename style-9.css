@@ -1,0 +1,513 @@
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* remove fixed height ❌ */
+  /* height: 1000px; */
+
+  background-color: #f95f07;
+
+  position: relative;
+  min-height: 100vh; /* ✅ important */
+}
+
+/* FIXED full background layer */
+body::before {
+  content: "";
+  position: fixed;   /* 🔥 change from absolute → fixed */
+  inset: 0;
+
+  background-image: url("Oil_Lamp_20260405084452.gif");
+  background-size: 80px;
+  background-repeat: repeat;
+
+  animation: fadeBg 3s infinite ease-in-out;
+
+  z-index: 0.7;  /* ✅ behind everything */
+}
+@keyframes fadeBg {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #f95f07;
+
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("Oil_Lamp_20260405084452.gif");
+  background-size: 80px;
+  background-repeat: repeat;
+
+  animation: fadeBg 3s infinite ease-in-out;
+
+  z-index: 0.7;
+}
+@keyframes fadeBg {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+.main-container{
+    margin:0px;
+    width:100%;
+    height:100vh;
+    border-radius:8px;
+    overflow:hidden;
+    position:relative;
+}
+
+.img-container{
+   
+    inset:0;
+    width: 65%;
+    height: 100%;
+    float:right;
+    background-image:url("ved.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+
+    background-position: right center;
+}
+
+.nav-bar{
+    position:absolute;
+    top:20px;
+    right:20px;
+
+    display:flex;
+    gap:28px;
+
+    padding:10px 22px;
+    border-radius:40px;
+
+    background:#f95f07;
+    backdrop-filter:blur(10px);
+}
+
+.nav-item{
+    color:black;
+    font-size:18px;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:.25s;
+}
+
+.nav-item:hover{
+    color:white;
+    transform:translateY(-3px);
+}
+.overlay{
+   position:absolute;
+    top:0;
+    left:0;
+
+    width:auto;
+    height:100%;
+
+    z-index:2;
+
+    padding:60px 60px;
+    box-sizing:border-box;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+   background:linear-gradient(
+    90deg,
+    rgba(0,0,0,0.08),
+    rgba(0,0,0,0.10),
+    transparent
+);
+
+    backdrop-filter:blur(6px);
+}
+
+.nav-bar{
+    z-index:3;
+}
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+}
+.gifs{
+    position:absolute;
+
+    top:146px;
+
+    left:clamp(740px, 32%, 620px);
+
+    width:clamp(90px, 10vw, 160px);
+    height:clamp(90px, 10vw, 160px);
+
+    background:url("200w\ \(2\).webp") no-repeat center;
+    background-size:contain;
+    
+    mix-blend-mode: difference;
+}
+.img-container-2{
+     position:absolute;
+    top:-120px;
+    left:-30px;
+
+    width:500px;
+    height:360px;
+
+    background:url("header.png") no-repeat left top;
+    background-size:contain;
+
+    z-index:4;
+}
+.search-bar{
+    position:absolute;
+
+    top:18px;
+    left:460px;
+
+    z-index:5;
+}
+.search-box{
+    display:flex;
+    align-items:center;
+
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(8px);
+
+    border-radius:30px;
+    padding:6px 10px;
+}
+
+.search-box input{
+    border:none;
+    outline:none;
+    background:transparent;
+
+    width:180px;
+    font-size:14px;
+}
+
+.search-box button{
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    font-size:16px;
+}
+.card-g{
+
+    
+     
+    margin: 0px auto;
+    border-radius: 12px;
+
+    flex-direction: row;
+ 
+}
+.card-p{
+    
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+}
+.card-s{
+     
+    
+    margin: 0px auto;
+    display: flex;
+     flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+}
+.card-3{
+    height:200px;
+    width:300px;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:flex-start;
+    align-items:center;
+
+    padding-top:20px;
+
+    border-radius:12px;
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(8px);
+
+    margin:10px;
+}
+.ved{
+    margin:0;
+    color:black;
+    text-align:center;
+}
+.ved-s{
+    margin:10px;
+    color:black;
+    text-align:center;
+    font-size:14px;
+
+    overflow:auto;
+
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+}
+
+.ved-s::-webkit-scrollbar{
+    display:none;
+}
+.card-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+    opacity: 0.3;
+  }
+}
+.main-container{
+    margin:0px;
+    width:100%;
+    height:100vh;
+    border-radius:8px;
+    overflow:hidden;
+    position:relative;
+   
+}
+
+/* FULL COVER IMAGE */
+.img-container{
+   
+    inset:0;
+    width: 65%;
+    height: 100%;
+    float:right;
+    background-image:url("ved.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+
+    /* cinematic framing */
+    background-position: right center;
+}
+/* THIN BAR */
+.nav-bar{
+    position:absolute;
+    top:20px;
+    right:20px;
+
+    display:flex;
+    gap:28px;
+
+    padding:10px 22px;
+    border-radius:40px;
+
+    background:#f95f07;
+    backdrop-filter:blur(10px);
+}
+
+/* ITEMS */
+.nav-item{
+    color:black;
+    font-size:18px;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:.25s;
+}
+
+.nav-item:hover{
+    color:white;
+    transform:translateY(-3px);
+}
+.overlay{
+   position:absolute;
+    top:0;
+    left:0;
+
+    width:auto;
+    height:100%;
+
+    z-index:2;
+
+    padding:60px 60px;   /* inner spacing only */
+    box-sizing:border-box;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+   background:linear-gradient(
+    90deg,
+    rgba(0,0,0,0.08),
+    rgba(0,0,0,0.10),
+    transparent
+);
+
+    backdrop-filter:blur(6px);
+}
+
+.nav-bar{
+    z-index:3;
+}
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+}
+.gifs{
+    position:absolute;
+
+    /* ⭐ vertical ko fixed optical anchor do */
+    top:146px;
+
+    /* ⭐ horizontal responsive rakho */
+    left:clamp(740px, 32%, 620px);
+
+    width:clamp(90px, 10vw, 160px);
+    height:clamp(90px, 10vw, 160px);
+
+    background:url("200w\ \(2\).webp") no-repeat center;
+    background-size:contain;
+    
+    mix-blend-mode: difference;
+}
+.img-container-2{
+     position:absolute;
+    top:-120px;      /* ⭐ pull upward */
+    left:-30px;
+
+    width:500px;
+    height:360px;
+
+    background:url("header.png") no-repeat left top;
+    background-size:contain;
+
+    z-index:4;
+}
+.search-bar{
+    position:absolute;
+
+    /* ⭐ logo reference alignment */
+    top:18px;          /* logo ke visual mid level */
+    left:460px;        /* ⭐ approx logo width + 40px gap */
+
+    z-index:5;
+}
+.search-box{
+    display:flex;
+    align-items:center;
+
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(8px);
+
+    border-radius:30px;
+    padding:6px 10px;
+}
+
+.search-box input{
+    border:none;
+    outline:none;
+    background:transparent;
+
+    width:180px;
+    font-size:14px;
+}
+
+.search-box button{
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    font-size:16px;
+}
+.card-g{
+
+    
+     
+    margin: 0px auto;
+    border-radius: 12px;
+
+    flex-direction: row;
+ 
+}
+.card-p{
+    
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+}
+.card-s{
+     
+    
+    margin: 0px auto;
+    display: flex;
+     flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+}
+.card-3{
+    height:200px;
+    width:300px;
+
+    display:flex;
+    flex-direction:column;     /* ⭐ important */
+
+    justify-content:flex-start; /* ⭐ top */
+    align-items:center;         /* ⭐ center horizontally */
+
+    padding-top:20px;           /* ⭐ space from top */
+
+    border-radius:12px;
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(8px);
+
+    margin:10px;
+
+   
+}
+.ved{
+    margin:0;
+    color:black;
+    text-align:center;
+}
+.ved-s{
+    margin:10px;
+    color:black;
+    text-align:center;
+    font-size:14px;
+
+    overflow:auto;        /* ⭐ scroll works */
+
+    /* ⭐ scrollbar hide (Chrome / Edge / Safari) */
+    scrollbar-width:none;        /* Firefox */
+    -ms-overflow-style:none;     /* IE */
+}
+
+.ved-s::-webkit-scrollbar{
+    display:none;        /* Chrome */
+}
+.card-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}

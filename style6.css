@@ -1,11 +1,37 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 
+  background-color: black;
 
-body{
-    margin:0;
-    background:#f95f07;
-    font-family:Arial, Helvetica, sans-serif;
+  position: relative;
+  min-height: 100vh;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("shankh.png");
+  background-size: 80px;
+  background-repeat: repeat;
+
+  animation: fadeBg 3s infinite ease-in-out;
+
+  z-index: 0.7;
+}
+@keyframes fadeBg {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
 .main-container{
     margin:0px;
     width:100%;
@@ -13,10 +39,8 @@ body{
     border-radius:8px;
     overflow:hidden;
     position:relative;
-   
 }
 
-/* FULL COVER IMAGE */
 .img-container{
    
     inset:0;
@@ -27,10 +51,9 @@ body{
     background-size:cover;
     background-repeat:no-repeat;
 
-    /* cinematic framing */
     background-position: right center;
 }
-/* THIN BAR */
+
 .nav-bar{
     position:absolute;
     top:20px;
@@ -46,7 +69,6 @@ body{
     backdrop-filter:blur(10px);
 }
 
-/* ITEMS */
 .nav-item{
     color:black;
     font-size:18px;
@@ -69,7 +91,7 @@ body{
 
     z-index:2;
 
-    padding:80px 60px;   /* inner spacing only */
+    padding:80px 60px;
     box-sizing:border-box;
 
     display:flex;
@@ -98,10 +120,8 @@ body{
 .gifs{
     position:absolute;
 
-    /* ⭐ vertical ko fixed optical anchor do */
     top:146px;
 
-    /* ⭐ horizontal responsive rakho */
     left:clamp(740px, 32%, 620px);
 
     width:clamp(90px, 10vw, 160px);
@@ -114,7 +134,7 @@ body{
 }
 .img-container-2{
      position:absolute;
-    top:-120px;      /* ⭐ pull upward */
+    top:-120px;
     left:-30px;
 
     width:500px;
@@ -128,9 +148,8 @@ body{
 .search-bar{
     position:absolute;
 
-    /* ⭐ logo reference alignment */
-    top:18px;          /* logo ke visual mid level */
-    left:460px;        /* ⭐ approx logo width + 40px gap */
+    top:18px;
+    left:460px;
 
     z-index:5;
 }
@@ -167,7 +186,6 @@ desc{
     font-size:18px;
 }
 
-/* TREE LAYOUT */
 .tree{
     margin-top:40px;
     display:flex;
@@ -176,7 +194,6 @@ desc{
     gap:40px;
 }
 
-/* LEVEL ROW */
 .level{
     display:flex;
     gap:60px;
@@ -184,14 +201,12 @@ desc{
     justify-content:center;
 }
 
-/* CONNECTOR LINE */
 .connector{
     width:4px;
     height:40px;
     background:black;
 }
 
-/* NODE STYLE */
 .node{
     background:white;
     padding:14px 22px;
@@ -206,14 +221,12 @@ desc{
     background:#ffe0b3;
 }
 
-/* MAIN GODS */
 .main{
     font-size:20px;
     font-weight:bold;
     background:#fff4d6;
 }
 
-/* SMALL NODES */
 .small{
     font-size:14px;
 }

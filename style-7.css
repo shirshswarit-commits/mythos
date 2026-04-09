@@ -1,11 +1,40 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 
+  background-color: #f95f07;
 
-body{
-    margin:0;
-    background:#f95f07;
-    font-family:Arial, Helvetica, sans-serif;
+  position: relative;
+  min-height: 100vh;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("rangoli.gif");
+  background-size: 80px;
+  background-repeat: repeat;
+
+  animation: pulseBg 4s infinite ease-in-out;
+
+  z-index: 0.7;
+}
+@keyframes pulseBg {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
 .main-container{
     margin:0px;
     width:100%;
@@ -13,24 +42,22 @@ body{
     border-radius:8px;
     overflow:hidden;
     position:relative;
-   
 }
 
-/* FULL COVER IMAGE */
 .img-container{
    
     inset:0;
     width: 65%;
     height: 100%;
     float:right;
-    background-image:url("ved.png");
+    background-image:url("Ved.png");
     background-size:cover;
     background-repeat:no-repeat;
 
-    /* cinematic framing */
     background-position: right center;
+    z-index: 2;
 }
-/* THIN BAR */
+
 .nav-bar{
     position:absolute;
     top:20px;
@@ -42,11 +69,10 @@ body{
     padding:10px 22px;
     border-radius:40px;
 
-    background:#f95f07;
-    backdrop-filter:blur(10px);
+   background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(30px);
 }
 
-/* ITEMS */
 .nav-item{
     color:black;
     font-size:18px;
@@ -67,27 +93,18 @@ body{
     width:55%;
     height:100%;
 
-    z-index:2;
+    z-index:5;
 
-    padding:60px 60px;   /* inner spacing only */
+    padding:60px 60px;
     box-sizing:border-box;
 
     display:flex;
     flex-direction:column;
     justify-content:center;
-
-   background:linear-gradient(
-    90deg,
-    rgba(0,0,0,0.08),
-    rgba(0,0,0,0.10),
-    transparent
-);
-
-    backdrop-filter:blur(6px);
 }
 
 .nav-bar{
-    z-index:3;
+    z-index:6;
 }
 .nav-bar a {
     text-decoration: none;
@@ -96,10 +113,8 @@ body{
 .gifs{
     position:absolute;
 
-    /* ⭐ vertical ko fixed optical anchor do */
     top:146px;
 
-    /* ⭐ horizontal responsive rakho */
     left:clamp(740px, 32%, 620px);
 
     width:clamp(90px, 10vw, 160px);
@@ -112,7 +127,7 @@ body{
 }
 .img-container-2{
      position:absolute;
-    top:-120px;      /* ⭐ pull upward */
+    top:-120px;
     left:-30px;
 
     width:500px;
@@ -121,26 +136,27 @@ body{
     background:url("header.png") no-repeat left top;
     background-size:contain;
 
-    z-index:4;
+    z-index:8;
+    
 }
 .search-bar{
     position:absolute;
 
-    /* ⭐ logo reference alignment */
-    top:18px;          /* logo ke visual mid level */
-    left:460px;        /* ⭐ approx logo width + 40px gap */
+    top:18px;
+    left:460px;
 
-    z-index:5;
+    z-index:7;
 }
 .search-box{
     display:flex;
     align-items:center;
 
     background:rgba(255,255,255,0.25);
-    backdrop-filter:blur(8px);
+    backdrop-filter:blur(30px);
 
     border-radius:30px;
     padding:6px 10px;
+    z-index: 6;
 }
 
 .search-box input{
@@ -189,20 +205,18 @@ body{
     width:300px;
 
     display:flex;
-    flex-direction:column;     /* ⭐ important */
+    flex-direction:column;
 
-    justify-content:flex-start; /* ⭐ top */
-    align-items:center;         /* ⭐ center horizontally */
+    justify-content:flex-start;
+    align-items:center;
 
-    padding-top:20px;           /* ⭐ space from top */
+    padding-top:20px;
 
     border-radius:12px;
     background:rgba(255,255,255,0.25);
-    backdrop-filter:blur(8px);
+    backdrop-filter:blur(30px);
 
     margin:10px;
-
-   
 }
 .ved{
     margin:0;
@@ -215,15 +229,14 @@ body{
     text-align:center;
     font-size:14px;
 
-    overflow:auto;        /* ⭐ scroll works */
+    overflow:auto;
 
-    /* ⭐ scrollbar hide (Chrome / Edge / Safari) */
-    scrollbar-width:none;        /* Firefox */
-    -ms-overflow-style:none;     /* IE */
+    scrollbar-width:none;
+    -ms-overflow-style:none;
 }
 
 .ved-s::-webkit-scrollbar{
-    display:none;        /* Chrome */
+    display:none;
 }
 .card-link{
     text-decoration:none;
